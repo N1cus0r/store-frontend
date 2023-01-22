@@ -41,7 +41,13 @@ const SearchResult = ({
       <CenteredBox>
         <Grid container direction="column" spacing={1} backgroundColor="white">
           {products.map((product) => (
-            <Grid item key={product.id}>
+            <Grid
+              item
+              key={product.id}
+              style={{
+                width: "100%",
+              }}
+            >
               <Card onClick={() => handleClick(product.slug)}>
                 <Grid container direction="row" spacing={2}>
                   <Grid item xs={3}>

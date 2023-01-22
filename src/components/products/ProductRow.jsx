@@ -6,8 +6,6 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ProductRowLoader from "./ProductRowLoader";
 
 const ProductRow = ({ title, products, loading, page, setPage }) => {
-  const baseURL = "http://127.0.0.1:8000";
-
   const getNextPage = () => {
     setPage((prevPageState) => prevPageState + 1);
   };
@@ -46,7 +44,6 @@ const ProductRow = ({ title, products, loading, page, setPage }) => {
                   }
                   price={product.price}
                   image={product.image}
-                  // image={baseURL + product.image}
                 />
               </Grid>
             ))}

@@ -17,7 +17,6 @@ const ProductDetailForm = ({
   setSelectedSize,
   setFormOpen,
 }) => {
-  console.log(sizes);
   return (
     <>
       <Grid container direction="column" spacing={1}>

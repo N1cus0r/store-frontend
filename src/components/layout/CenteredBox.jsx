@@ -8,6 +8,7 @@ const CenteredBox = ({ children }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        width: "100%",
       }}
     >
       <Box
