@@ -10,7 +10,7 @@ const ProductDetailImage = ({ brand, model, color, image }) => {
         <Typography variant="body2">{color}</Typography>
       </Grid>
       <Grid item xs={8}>
-        <Image src={image} duration={0} />
+        {image && <Image src={image} duration={0} />}
       </Grid>
     </Grid>
   );

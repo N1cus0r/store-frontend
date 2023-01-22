@@ -1,3 +1,4 @@
+import { PlusOneSharp } from "@mui/icons-material";
 import {
   Dialog,
   DialogContent,
@@ -63,13 +64,13 @@ const OrderForm = ({ open, setOpen, selectedSize, itemSlug, itemPrice }) => {
       address,
       payment_type: paymentType,
       item: {
+        ...(selectedSize && { size: selectedSize }),
         slug: itemSlug,
-        size: selectedSize,
         price: itemPrice,
       },
     });
-
-    return navigate("/");
+    if (response.status === 201) return navigate("/");
+    setErrorMessage("Invalid data !");
   };
 
   return (
